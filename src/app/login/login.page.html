@@ -1,0 +1,42 @@
+<ion-header>
+  <style>
+    .color{
+      background-color: cornflowerblue
+    }
+    
+    </style>
+
+  <ion-toolbar >
+    <ion-title style="background-color:rgb(104, 103, 179)">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding center text-center >
+  
+
+  
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    
+  </ion-list>
+
+
+      <button (click)="login()" color="tertiary" [routerLink]="['/customer']" routerLinkActive="router-link-active" >Log in  </button><br>
+      <button color="danger" [routerLink]="['/register']" routerLinkActive="router-link-active" >Register </button><br>
+
+      
+
+
+
+     
+ 
+  
+ 
+
+</ion-content>
+

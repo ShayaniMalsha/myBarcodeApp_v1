@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="background-color:rgb(104, 103, 179)">customer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+      <ion-item >
+        <ion-input class="input" placeholder= "CustomerId" [(ngModel)]="customerid">Customer Id </ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label>Device Type</ion-label>
+          <ion-select placeholder="Select One" [(ngModel)]="devicetype">
+            <ion-select-option value="l">Laptop</ion-select-option>
+            <ion-select-option value="s">Scanner Machine</ion-select-option>
+            <ion-select-option value="f">Fax Machine</ion-select-option>
+            <ion-select-option value="c">Computer</ion-select-option>
+            
+          </ion-select>
+        </ion-item>
+  
+      <ion-item >
+          <ion-input placeholder="Model" [(ngModel)]="model" >Model</ion-input>
+      </ion-item> 
+  
+      <ion-item >
+          <ion-input placeholder="PurnpmhaseDate" [(ngModel)]="purchasedate">Purchase Date</ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input placeholder="WarrantyPeriod" [(ngModel)]="warrentyperiod">Warrenty Period</ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input placeholder="SerialNumber" [(ngModel)]="serialnumber" >Serial Number</ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input placeholder="ProductLine" [(ngModel)]="productline">Product Line</ion-input>
+      </ion-item>
+  
+      <form>
+          <input  type="file" name="name" multiple [(ngModel)]="deviceimage"><br><br>
+          Upload Device Images.<br>
+          
+       </form>
+  
+       <form>
+          <input  type="file" name="name" multiple [(ngModel)]="invoiceimage"><br><br>
+          Upload Invoice.<br>
+          
+       </form>
+  
+    </ion-list>
+  
+    <button ion-button color="danger" (click)="save()">Save</button>
+  
+    <button [routerLink]="['/scanner']" routerLinkActive="router-link-active" >Scan</button>
+  
+  </ion-content>
+
